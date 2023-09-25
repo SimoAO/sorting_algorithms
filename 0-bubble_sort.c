@@ -2,7 +2,7 @@
 
 /**
 *bubble_sort - a function that sorts an array of integers in
-ascending order using the Bubble sort algorithm
+*ascending order using the Bubble sort algorithm
 *@array: array of numbers
 *@size: size of the array
 */
