@@ -9,17 +9,31 @@
  */
 void node_swap(listint_t **head, listint_t **v1, listint_t *v2)
 {
-        (*v1)->next = v2->next;
-        if (v2->next != NULL)
-                v2->next->prev = *v1;
-        v2->prev = (*v1)->prev;
-        v2->next = *v1;
-        if ((*v1)->prev != NULL)
-                (*v1)->prev->next = v2;
-        else
-                *head = v2;
-        (*v1)->prev = v2;
-        *v1 = v2->prev;
+	(*v1)->next = v2->next;
+	if (v2->next != NULL)
+		v2->next->prev = *v1;
+	v2->prev = (*v1)->prev;
+	v2->next = *v1;
+	if ((*v1)->prev != NULL)
+		(*v1)->prev->next = v2;
+	else
+		*head = v2;
+	(*v1)->prev = v2;
+	*v1 = v2->prev;
+}
+
+/**
+ * swap - A function that swaps two integers in an array.
+ * @i: The first integer to swap.
+ * @j: The second integer to swap.
+ */
+void swap(int *i, int *j)
+{
+	int tmp;
+
+	tmp = *i;
+	*i = *j;
+	*j = tmp;
 }
 
 #endif
