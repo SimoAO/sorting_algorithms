@@ -2,7 +2,8 @@
 #include "functions.h"
 
 /**
- * lomuto_partition - This function selects the pivot using Lomuto's partition scheme.
+ * lomuto_partition - This function selects the pivot
+ * using Lomuto's partition scheme.
  *
  * @array: array to partition.
  * @low: low index of the array.
