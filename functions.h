@@ -36,4 +36,27 @@ void swap(int *i, int *j)
 	*j = tmp;
 }
 
+/**
+ * swap_ud - A function that swaps two nodes in a doubly-linked list.
+ * @list: Pointer to the head of the list.
+ * @i: First node to swap.
+ * @j: Second node to swap.
+ */
+void swap_ud(listint_t **list, listint_t *i, listint_t *j)
+{
+	if (i->prev)
+		i->prev->next = j;
+	if (j->next)
+		j->next->prev = i;
+	i->next = j->next;
+	j->prev = i->prev;
+	i->prev = j;
+	j->next = i;
+
+	if (!i->prev)
+		*list = i;
+	if (!j->prev)
+		*list = j;
+}
+
 #endif
